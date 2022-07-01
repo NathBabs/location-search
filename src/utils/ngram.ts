@@ -16,7 +16,7 @@ export function ngram(str: string, min_size: number, prefix_only: boolean): stri
     return ngrams;
 }
 
-console.log(ngram('Sidharth', 2, false));
+/* console.log(ngram('Sidharth', 2, false));
 
 function makeNgrams(word, minSize = 2, prefixOnly = false) {
   const length = word.length;
@@ -42,4 +42,4 @@ function makeNgrams(word, minSize = 2, prefixOnly = false) {
   return result
 }
 
-console.log(makeNgrams('Sidharth', 2, false));
+console.log(makeNgrams('Sidharth', 2, false)); */

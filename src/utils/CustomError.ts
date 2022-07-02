@@ -6,12 +6,11 @@ class CustomError extends Error {
   }
 }
 
-
-export function customError(error: { message: string; statusCode: number }) { 
-    return new CustomError(error.message, error.statusCode);
+export function customError(error: { message: string; statusCode: number }) {
+  return new CustomError(error.message, error.statusCode);
 }
 
 export type CustomTypeError = {
-    message: string;
-    statusCode: number;
+  message: string;
+  statusCode: number;
 };

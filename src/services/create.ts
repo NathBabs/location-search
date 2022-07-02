@@ -1,8 +1,9 @@
 
-import type { MongoClient } from 'mongodb';
+import type { Db } from 'mongodb';
+import { connectDatabase, db } from '../database/connection';
 import log from '../utils/logger';
 
-export async function insert(client: MongoClient, data: any[]) {
-    const results = await client.db("locations").collection("location_data").insertOne(data);
-    log.info(`Inserted ${results.insertedId} documents`);
+export async function insert(data: any[]) {
+    const results = await db.collection("location_data").insertMany(data);
+    log.info(`Inserted ${results.insertedCount} documents`);
 }

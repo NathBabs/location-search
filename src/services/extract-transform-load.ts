@@ -1,13 +1,12 @@
-import { createReadStream, ReadStream, writeFileSync } from 'node:fs';
+import { ReadStream } from 'node:fs';
 //import { appendFile } from "node:fs/promises";
 //import {db} from '../database/connection';
 
 import parse from 'csvtojson';
 import CSVError from 'csvtojson/v2/CSVError';
-import path from 'node:path';
+
 import { ngram } from '../utils/ngram';
 import { insert } from './create';
-import { Db } from 'mongodb';
 
 export function start(input: ReadStream) {
   const passed = new Set<string>();
@@ -98,7 +97,7 @@ async function processQueue(queue: any[]) {
 
   await insert(tasks);
 
-  return Promise.all([]);
+  return;
 }
 
 //start(readable);

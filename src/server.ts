@@ -1,5 +1,3 @@
-import path from 'node:path';
-import { createReadStream } from 'node:fs';
 import * as dotenv from 'dotenv';
 dotenv.config();
 import app from './app';
@@ -14,7 +12,7 @@ import logger from './utils/logger';
 const port = process.env.PORT || 1337;
 
 connectDatabase()
-  .then((db) => {
+  .then(() => {
     app.listen(port, () => {
       logger.info(`App is running on port ${port}`);
       // do not uncomment this line, if the operation has been run once

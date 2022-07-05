@@ -2,3 +2,4 @@ node_modules
 .env
 build
 cities_canada-usa.tsv
+error.txt

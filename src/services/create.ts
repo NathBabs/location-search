@@ -1,5 +1,4 @@
-import type { Db } from 'mongodb';
-import { connectDatabase, db } from '../database/connection';
+import { db } from '../database/connection';
 import log from '../utils/logger';
 
 export async function insert(data: any[]) {

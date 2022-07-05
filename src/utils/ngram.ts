@@ -1,8 +1,8 @@
 // a function to extract ngrams from a string with a minimum length option increasing the ngram size
 export function ngram(
   str: string,
-  min_size: number,
-  prefix_only: boolean
+  min_size = 2,
+  prefix_only = false
 ): string[] {
   const ngrams: string[] = [];
 
